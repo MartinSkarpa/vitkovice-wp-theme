@@ -6,15 +6,26 @@ const _ROOT_URL = "/vitkovice";
 const _NEWS        = "news";
 const _INSTRUCTORS = "instructors";
 
+// Main content post prefixes
+const _POST_ABOUT_US    = "_POST_ABOUT_US_";
+const _POST_KIDS_PARK   = "_POST_KIDS_PARK_";
+const _POST_INSTRUCTORS = "_POST_INSTRUCTORS_";
+const _POST_PRICING     = "_POST_PRICING_";
+
 // i18n
 const _LANG_SHORTCUTS = [
 	"en_US" => "EN",
 	"cs_CZ" => "CZ"
 ];
+const _MAPY_API_LANG_CODES = [
+    "en_US" => "en",
+    "cs_CZ" => "cs"
+];
 
 function vitkovice_resources() {
 	wp_enqueue_style( "bootstrap.min", get_stylesheet_directory_uri() . "/css/bootstrap/bootstrap.min.css" );
 	wp_enqueue_style( "bootstrap-icons", get_stylesheet_directory_uri() . "/font/bootstrap-icons.css" );
+	wp_enqueue_style( "fonts", get_stylesheet_directory_uri() . "/css/app/fonts.css" );
 	wp_enqueue_style( "style", get_stylesheet_uri() );
 }
 
@@ -37,6 +48,17 @@ function get_category_id_by_slug( $categorySlug ) {
 	$category = get_category_by_slug( $categorySlug );
 
 	return $category ? $category->term_id : null;
+}
+
+function get_post_by_name( $post_name ) {
+    $post_ids = get_posts(array(
+        "name"          => $post_name,
+        "post_type"     => "post",
+        "numberposts"   => 1,
+        "fields"        => "ids"
+    ));
+
+    return get_post( array_shift( $post_ids ) );
 }
 
 function redefine_locale( $locale ) {

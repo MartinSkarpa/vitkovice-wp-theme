@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: vitkovice-wp-theme\n"
-"POT-Creation-Date: 2022-10-10 18:39+0200\n"
-"PO-Revision-Date: 2022-10-13 00:08+0200\n"
+"POT-Creation-Date: 2023-01-07 03:14+0100\n"
+"PO-Revision-Date: 2023-01-07 03:15+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_n;esc_html;esc_html__\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -27,76 +27,113 @@ msgstr "Jejda! Stránka na kterou se snažíte dostat neexistuje."
 msgid "404 not found"
 msgstr "404 nenalezeno"
 
-#: header.php:29 index.php:6
+#: header.php:43 index.php:15
 msgid "About us"
 msgstr "O nás"
 
-#: header.php:32 index.php:26
+#: header.php:46 index.php:38
 msgid "News"
 msgstr "Novinky"
 
-#: header.php:35 index.php:65
+#: header.php:49 index.php:85
 msgid "Kindergarten"
 msgstr "Dětský park"
 
-#: header.php:38 index.php:94
+#: header.php:52 index.php:117
 msgid "Instructors"
 msgstr "Instruktoři"
 
-#: header.php:41 index.php:160
+#: header.php:55 index.php:186
 msgid "Price list"
 msgstr "Ceník"
 
-#: header.php:44 index.php:192
+#: header.php:58 index.php:381
 msgid "Contact us"
 msgstr "Kontakt"
 
-#: header.php:50
+#: header.php:64
 msgid "Home"
 msgstr "Home"
 
-#: index.php:44 page-news-archive.php:29 search.php:52
+#: index.php:64 page-news-archive.php:37 search.php:57
 msgid "Read more...."
 msgstr "Číst dále...."
 
-#: index.php:53 index.php:149 page-all-instructors.php:45
-#: page-news-archive.php:63 search.php:62
+#: index.php:73 index.php:175 page-all-instructors.php:46
+#: page-news-archive.php:72 search.php:67
 msgid "No content found."
 msgstr "Nebyl nalezen žádný obsah."
 
-#: index.php:59
+#: index.php:79
 msgid "Older posts"
 msgstr "Starší příspěvky"
 
-#: index.php:139 page-all-instructors.php:35
+#: index.php:166 page-all-instructors.php:37
 msgid "Into the profile >>"
 msgstr "Přejít do profilu >>"
 
-#: index.php:154
+#: index.php:180
 msgid "Other instructors"
 msgstr "Další instruktoři"
 
-#: index.php:196
+#: index.php:386
+msgid ""
+"You can find our office 100m from the top station of the Jizerka lift in the "
+"area of ALDROV RESORT. Our ski kindergarten for children or complete "
+"beginners is right next to the snow park FREESTYLE AREA VÍTKOVICE."
+msgstr ""
+"Kancelář naleznete u horní stanice vleku Jizerka v přilehlém areálu ALDROV "
+"RESORT. Náš dětský park pro nejmenší či úplné začátečníky je hned vedle "
+"snowparku FREESTYLE AREA VÍTKOVICE."
+
+#: index.php:391
+msgid "Opening Times"
+msgstr "Otevírací doba"
+
+#: index.php:392
+msgid "Office opening Times"
+msgstr "Otevírací doba kanceláře"
+
+#: index.php:393
+msgid "Teaching time"
+msgstr "Vyučovací doba"
+
+#: index.php:396
 msgid "Address"
 msgstr "Adresa"
 
-#: index.php:203
+#: index.php:402
 msgid "Manager"
 msgstr "Odpovědný vedoucí"
 
-#: search.php:13
+#: search.php:12
 #, php-format
 msgid "Results for \"%s\""
 msgstr "Výsledky pro \"%s\""
 
-#: search.php:28
-#, php-format
+#: search.php:25
+#, fuzzy, php-format
+#| msgid "Found %d result for your search."
+#| msgid_plural "Found %d results for your search."
 msgid "Found %d result for your search."
-msgid_plural "Found %d results for your search."
-msgstr[0] "Nalezen %d výsledek pro vaše hledání."
-msgstr[1] "Nalezen %d výsledeků pro vaše hledání."
-msgstr[2] "Nalezen %d výsledeků pro vaše hledání."
+msgstr "Nalezen %d výsledek pro vaše hledání."
 
-#: searchform.php:3 searchform.php:4
+#: searchform.php:3
 msgid "Search"
 msgstr "Hledat"
+
+#~ msgid ""
+#~ "We are a ski and snowboard school offering a wide range of services from "
+#~ "lessons for the little ones in our kindergarten to private freestyle "
+#~ "lessons in the snow park for more experienced riders. We also offer full-"
+#~ "season programs for children. Our team is made out of seasoned "
+#~ "professionals with experience from big schools from the Czech Republic "
+#~ "and abroad. We chose Vítkovice as our base for its  special community and "
+#~ "atmosphere."
+#~ msgstr ""
+#~ "Jsme lyžařská a snowboardová škola, která má v nabídce vše od kurzů pro "
+#~ "nejmenší v lyžařské školičce až po privátní lekce freestyle snowboardingu "
+#~ "ve snowparku. Zároveň máme i celosezónní programy pro děti. Instruktorský "
+#~ "tým tvoří zkušení profesionálové se zkušenostmi z velkých škol i ze "
+#~ "zahraničí. Rozhodli jsme se ale pro Vítkovice kvůli jejich specifické "
+#~ "komunitě a atmosféře."

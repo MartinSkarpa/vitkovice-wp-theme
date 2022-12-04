@@ -4,12 +4,30 @@
     <meta charset="<?php bloginfo('charset'); ?>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title><?php bloginfo('name'); ?></title><!--TODO-->
-    <?php wp_head(); ?>
+    <link type="image/x-icon" rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/icon_light.png" />
+<?php
+    wp_head();
+    require_once(__DIR__."/credentials.php");
+?>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-info">
+    <style>
+        body {
+            background-attachment: fixed;
+            background-image: url("<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/logo_watermark.png");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+    <script type="application/javascript">
+        const MAPY_API_LANG_CODE = '<?php echo _MAPY_API_LANG_CODES[determine_locale()]; ?>';
+    </script>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-secondary" id="navbarMain">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">Vítkovice<?php /* the_title(); */ ?></a><!--TODO-->
+            <a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+                <img src="<?php echo get_theme_root_uri()._ROOT_DIR; ?>/img/brand_dark.png" alt="Aldrov logo" height="70">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarLinks" aria-controls="navbarLinks"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +69,7 @@
                 </ul>
                 <ul class="navbar-nav mt-4 mt-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?php echo _LANG_SHORTCUTS[determine_locale()]; ?>
                         </a>
                         <ul class="dropdown-menu">

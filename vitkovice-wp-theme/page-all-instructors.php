@@ -1,8 +1,8 @@
 <?php /* Template Name: page-all-instructors */ ?>
 <?php get_header(); ?>
 
-<main class="container bg-white">
-    <section id="" class="py-3 mt-5">
+<main class="container">
+    <section id="" class="py-3 section-top">
         <!--TODO Breadcrumbs-->
 
         <div class="row">
@@ -17,7 +17,7 @@
         $instructorsQuery->the_post();
 ?>
                 <div class="col-6 col-md-4 col-lg-3 col-xxl-2 mb-3">
-                    <div class="card">
+                    <div class="card h-100">
 <?php
         if (has_post_thumbnail()) {
             the_post_thumbnail(array(300, 150), array("class" => "card-img-top", "alt" => get_the_title()));
@@ -28,12 +28,13 @@
         }
 ?>
                         <div class="card-body">
-                            <h2 class="h4"><?php the_title(); ?></h2>
-                            <p>
-                                <?php the_excerpt(); ?><!--TODO Zarovnat text-->
-                                <br/>
-                                <a href="<?php the_permalink(); ?>"><?php _e("Into the profile >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
+                            <h2 class="card-title h4"><?php the_title(); ?></h2>
+                            <p class="card-text">
+                                <?php the_excerpt(); ?>
                             </p>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <a class="card-link" href="<?php the_permalink(); ?>"><?php _e("Into the profile >>", "vitkovice-wp-theme"); ?></a><!--TODO Spravny odkaz-->
                         </div>
                     </div>
                 </div>

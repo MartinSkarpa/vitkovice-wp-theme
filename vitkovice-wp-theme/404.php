@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<main class="container bg-white">
-	<section id="" class="py-3 mt-5">
+<main class="container">
+	<section id="" class="py-3 section-top">
 		<!--TODO Breadcrumbs-->
 
 		<h1><?php _e("Page not found", "vitkovice-wp-theme"); ?></h1>

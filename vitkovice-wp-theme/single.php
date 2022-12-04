@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<main class="container bg-white">
+<main class="container">
     <div class="row">
-        <section id="" class="col-12 py-3 mt-5">
+        <section id="" class="col-12 py-3 section-top">
             <!--TODO Breadcrumbs-->
 
 <?php
@@ -20,7 +20,7 @@
                     height: 200px;
                 }
             </style>
-            <div class="w-100 the-post-image"></div>
+            <!--<div class="w-100 the-post-image"></div>-->
 <?php
 	    }
 ?>

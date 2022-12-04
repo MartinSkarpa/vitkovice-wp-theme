@@ -12,11 +12,152 @@
  Domain Path:   /lang
 */
 
+:root {
+    --aldrov-primary-100: #000;
+    --aldrov-primary-200: #555;
+    --aldrov-primary-200-rgb: 85, 85, 85;
+    --aldrov-secondary-100: #bbb;
+    --aldrov-secondary-200: #b0b0b0;
+    --aldrov-secondary-300: #a0a0a0;
+    --aldrov-secondary-400: #999;
+    --aldrov-light-100: #fff;
+    --aldrov-light-200: #eee;
+
+    --bs-primary: var(--aldrov-primary-100);
+    --bs-secondary: var(--aldrov-secondary-400);
+    --bs-border-radius: 1.5rem;
+    --bs-link-color: var(--aldrov-primary-100);
+    --bs-link-hover-color: var(--aldrov-secondary-400);
+
+    --aldrov-box-shadow: 3px 3px 8px 0 rgb(var(--aldrov-primary-200-rgb));
+
+    --bs-font-sans-serif: "TT Commons", sans-serif;
+    --bs-body-font-size: 1.25rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-dropdown-font-size: 1.25rem;
+    --bs-nav-link-font-size: 1.25rem;
+    --bs-navbar-brand-font-size: 1.5rem;
+    --bs-pagination-font-size: 1.25rem;
+    --bs-tooltip-font-size: 1.225rem;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-weight: 700;
+}
+
+h1, .h1 {
+    text-transform: uppercase;
+}
+
+.btn {
+    --bs-btn-border-radius: 1.5rem;
+    --bs-btn-border-width: 2px;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--aldrov-primary-100);
+    --bs-btn-border-color: var(--aldrov-primary-100);
+    --bs-btn-hover-color: var(--aldrov-light-100);
+    --bs-btn-hover-bg: var(--aldrov-primary-100);
+    --bs-btn-hover-border-color: var(--aldrov-primary-100);
+    --bs-btn-active-color: var(--aldrov-light-100);
+    --bs-btn-active-bg: var(--aldrov-primary-100);
+    --bs-btn-active-border-color: var(--aldrov-primary-100);
+    --bs-btn-disabled-color: var(--aldrov-primary-100);
+    --bs-btn-disabled-border-color: var(--aldrov-primary-100);
+    --bs-btn-focus-shadow-rgb: var(--aldrov-primary-200-rgb);
+}
+
+.form-control {
+    border-radius: 1.5rem;
+    border-width: 2px;
+}
+
+.form-control:focus {
+    border-color: var(--aldrov-primary-200);
+    box-shadow: 0 0 0 0.25rem rgba(var(--aldrov-primary-200-rgb), .25);
+}
+
+.dropdown-menu {
+    --bs-dropdown-border-radius: 0;
+    --bs-dropdown-border-width: 0;
+    --bs-dropdown-link-active-bg: var(--aldrov-primary-100);
+    box-shadow: var(--aldrov-box-shadow);
+}
+
+.card {
+    --bs-card-border-radius: 1.5rem;
+    --bs-card-inner-border-radius: 1.5rem;
+    --bs-card-border-width: 0;
+    --bs-card-cap-padding-y: 1rem;
+    box-shadow: var(--aldrov-box-shadow);
+}
+
+.table-secondary {
+    --bs-table-bg: var(--aldrov-secondary-100);
+    --bs-table-border-color: var(--aldrov-secondary-400);
+    --bs-table-striped-bg: var(--aldrov-secondary-200);
+    --bs-table-active-bg: var(--aldrov-secondary-400);
+    --bs-table-hover-bg: var(--aldrov-secondary-300);
+}
+
+.wp-block-table thead th {
+    background-color: var(--aldrov-secondary-200);
+}
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.nav-link {
+    /*--bs-nav-link-color: var(--aldrov-light-200);*/
+    --bs-nav-link-hover-color: var(--aldrov-light-100);
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--aldrov-light-100);
+    transition: 0.4s
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    --bs-navbar-nav-link-padding-x: 1.5rem;
+}
+
+.section-secondary {
+    background-color: rgba(var(--bs-light-rgb), .8);
+}
+
 .text-justify {
     text-align: justify;
 }
 
+.section-top {
+    margin-top: 100px;
+}
+
+.font-xs {
+    font-size: .7rem;
+}
+
+#socialMediaContainer {
+    font-size: 2rem;
+}
+
+#socialMediaContainer a {
+    margin-right: 1rem;
+}
+
+#socialMediaContainer a:last-of-type {
+    margin-right: 0;
+}
+
 #addressMapContainer {
-    width: 100%;
     height: 300px;
 }
