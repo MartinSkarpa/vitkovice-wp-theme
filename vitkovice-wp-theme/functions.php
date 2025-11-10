@@ -63,15 +63,15 @@ function get_post_by_name( $post_name ) {
 }
 
 function redefine_locale( $locale ) {
-	session_start();
-	if ( isset( $_GET["lang"] ) ) {
-		$locale           = $_GET["lang"];
-		$_SESSION["lang"] = $locale;
-	} elseif ( isset( $_SESSION["lang"] ) ) {
-		$locale = $_SESSION["lang"];
-	}
+    if ( isset( $_GET["lang"] ) ) {
+        $locale = sanitize_text_field( $_GET["lang"] );
+        setcookie( "lang", $locale, time() + WEEK_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN );
+        $_COOKIE["lang"] = $locale;
+    } elseif ( isset( $_COOKIE["lang"] ) ) {
+        $locale = sanitize_text_field( $_COOKIE["lang"] );
+    }
 
-	return $locale;
+    return $locale;
 }
 
 add_filter( "locale", "redefine_locale", 10 );
